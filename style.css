@@ -1,0 +1,133 @@
+/* Start Variables */
+:root {
+    /* Fonts */
+    --body-font: 'Poppins', sans-serif;
+    /* Colors  */
+    --c1-color: hsl(0, 100%, 74%);
+    --c2-color: hsl(154, 59%, 51%);
+    --c3-color: hsl(248, 32%, 49%);
+    --c4-color: hsl(249, 10%, 26%);
+    --c5-color: hsl(246, 25%, 77%);
+}
+/* End Variables */
+
+/* Start Global Rules */
+*{margin: 0; padding: 0; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box;}
+body{
+    background: #ff7978;  font-family: var(--body-font);
+    background-image: url(images/bg-intro-desktop.png); 
+    display: flex;  justify-content: center;  align-items: center;  min-height: 100vh;
+}
+.container{margin: 0 auto;}
+@media screen and (min-width: 1100px) {.container{width: 1100px;}}
+@media screen and (max-width: 1099px) {.container{width: 328px;}}
+/* End Global Rules */
+.container{
+    display: flex; justify-content: space-between;  align-items: center; 
+}
+
+.info h1{
+    font-size: 3rem;  color: white;  font-weight: 700;
+    margin-bottom: 2rem; line-height: 1.2;
+}
+.info p {
+    font-size: 1rem;  color: white;  font-weight: 400;
+}
+
+.subs-form .trial-info{
+    margin-bottom: 25px;  text-align: center;  background-color: var(--c3-color);
+    padding: 17px 30px;  border-radius: 10px;
+    box-shadow: 0px 8px 0px 0px rgba(0,0,0,0.15);
+}
+.subs-form .trial-info p span:first-child{
+    color: white;  font-weight: 600;
+}
+.subs-form .trial-info p span:last-child{
+    color: #fefaff;  font-weight: 300;
+}
+.subs-form form{
+    display: flex;  flex-direction: column;
+    padding: 40px;  background-color: white;  border-radius: 10px;
+    box-shadow: 0px 8px 0px 0px rgba(0,0,0,0.15);
+}
+.subs-form form input{
+   height: 50px;  padding-left: 30px;  width: 100%;
+   border: 1px solid var(--c5-color);  border-radius: 6px;
+   font-family: 'Poppins', sans-serif; font-weight: 600;
+}
+.subs-form form input:not(:first-child){
+    margin-top: 20px;
+}
+.subs-form form input::placeholder{
+    font-weight: 700;  color: hsla(249, 10%, 26%, 0.712);  font-size: 15px;
+}
+.subs-form form input:focus{
+    outline: none;  border: 1px solid var(--c4-color);
+}
+.subs-form form button{
+    height: 50px; border-radius: 6px;  border: none;
+    background-color: var(--c2-color);
+    box-shadow: 0px 4px 0px 0px rgba(93,166,136,1);
+    text-transform: uppercase;  color: white;  font-size: 15.5px;  font-weight: 600;
+    line-height: 2;  cursor: pointer; margin-top: 20px;  margin-bottom: 20px;
+}
+.subs-form form button:hover{
+    background-color: #77e2b4;
+}
+
+
+.subs-form form .p-agree{    
+    font-size: 11px; text-align: center; 
+    color: var(--c5-color); font-weight: 600;
+}
+.subs-form form .p-agree span{
+    color: var(--c1-color);  font-weight: 700;
+} 
+@media screen and (min-width: 1100px) {
+    .info{
+        margin-right: 70px;  width: 48%;
+    }
+    .subs-form{
+        width: 52%;
+    }
+    .info h1{
+        width: 25.75rem;
+    }
+}
+
+
+.subs-form form input.invalid{
+    border: 2px solid #fa6561;
+    background: url("images/icon-error.svg") no-repeat 95% center;
+}
+.subs-form form input.valid{
+    border: 2px solid #3ab54a;
+    background: url("images/icon-ok.png") no-repeat 95% center;
+    background-size: 25px;
+}
+.subs-form form input[type="email"].invalid{
+    color: #fa6661c9;
+}
+.subs-form form .invalid-feedback{
+    text-align: right;  font-size: 11px;  font-style: italic;  margin-top: 6px;
+    color: #fa6561;  font-weight: 500;
+}
+.hide{
+    display: none;
+}
+
+/* Mobile Media Rules */
+@media screen and (max-width: 1099px) {
+    .container{
+        flex-direction: column;  text-align: center;  padding-top: 75px;  padding-bottom: 75px;
+    }
+    .info h1{
+        font-size: 1.6rem;
+    }
+    .info p {
+        margin-bottom: 2rem;
+    }
+    .subs-form .trial-info p{
+        padding: 0 40px;
+    }
+}

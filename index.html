@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <title>Frontend Mentor | Intro component with sign up form</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Template Css File -->
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main>
+      <div class="container">
+        <div class="info">
+          <h1>Learn to code by watching others</h1>
+          <p>
+            See how experienced developers solve problems in real-time. Watching
+            scripted tutorials is great, but understanding how developers think
+            is invaluable.
+          </p>
+        </div>
+        <div class="subs-form">
+          <div class="trial-info">
+            <p><span>Try it free 7 days</span> <span>then $20/mo. thereafter</span></p>
+          </div>
+          <form>
+            <input type="text" id="firstName" placeholder="First Name">
+            <p class="invalid-feedback hide">First Name cannot be empty</p>
+            <input type="text" id="lastName" placeholder="Last Name">
+            <p class="invalid-feedback hide">Last Name cannot be empty</p>
+            <input type="email" id="email" placeholder="Email Address">
+            <p class="invalid-feedback hide">Looks like this is not an email</p>
+            <input type="password" id="password" placeholder="Password">
+            <p class="invalid-feedback hide">Password cannot be empty</p>
+            <button type="submit" id="submitBtn">Claim your free trial</button>
+            <p class="p-agree">By clicking the button, you are agreeing to our <span>Terms and Services</span></p>
+          </form>
+        </div>
+      </div>
+    </main>
+
+    <!-- Include SweetAlert from a CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
